@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noooooooooo</title>
+    <style>
+        /*video::-webkit-media-controls-panel {*/
+        /*    display: none !important;*/
+        /*    opacity: 1 !important;}*/
+        /*video {*/
+        /*    pointer-events: none;*/
+        /*}*/
+        .fullscreen-bg {
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+
+
+            position:relative;
+            height:100vh;
+        }
+
+        .fullscreen-bg__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            .fullscreen-bg__video {
+                height: 300%;
+                top: -100%;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            .fullscreen-bg__video {
+                width: 300%;
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen-bg">
+        <video id="player" class="fullscreen-bg__video" loop autoplay playsinline>
+            <source id="video" src="NOOOOOOOOO.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
